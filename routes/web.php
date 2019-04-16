@@ -19,5 +19,8 @@ Route::get('/', 'StaticController@home')->name('home');
 Route::get('/help', 'StaticController@help')->name('help');
 Route::get('/about', 'StaticController@about')->name('about');
 
+//注册路由
+Route::get('register', "UsersController@create")->name('register');
+
 
 
