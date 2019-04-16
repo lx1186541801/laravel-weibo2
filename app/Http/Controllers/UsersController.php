@@ -25,7 +25,7 @@ class UsersController extends Controller
             'email' => 'required|email|unique:users|max:255',
             'password'  => 'required|confirmed|min:6'
         ];
-        $this->validate($request.$rule);
+        $this->validate($request, $rule);
         return ;
     }
 
