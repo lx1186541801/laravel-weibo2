@@ -25,3 +25,8 @@ Route::get('register', "UsersController@create")->name('register');
 //用户模型路由
 Route::resource('users', 'UsersController');
 
+//登陆登出路由
+Route::get('login', 'SessionController@create')->name('login');
+Route::post('login', 'SessionController@store')->name('login');
+Route::get('logout', 'SessionController@destory')->name('logout');
+
