@@ -22,5 +22,6 @@ Route::get('/about', 'StaticController@about')->name('about');
 //注册路由
 Route::get('register', "UsersController@create")->name('register');
 
-
+//用户模型路由
+Route::resource('users', 'UsersController');
 
