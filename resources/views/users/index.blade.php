@@ -8,9 +8,10 @@
             @foreach ($users as $user)
                 @include('users._user_info')
             @endforeach
-            <div class="mt-3">
-                {!! $users->render() !!}
-            </div>
+        </div>
+
+        <div class="mt-3">
+            {!! $users->render() !!}
         </div>
     </div>
 @stop

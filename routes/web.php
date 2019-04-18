@@ -30,3 +30,5 @@ Route::get('login', 'SessionController@create')->name('login');
 Route::post('login', 'SessionController@store')->name('login');
 Route::delete('logout', 'SessionController@destory')->name('logout');
 
+//激活账号路由
+Route::get('register/confirm/{token}', 'UsersController@confirmEmail')->name('confirm_email');
