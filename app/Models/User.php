@@ -46,11 +46,18 @@ class User extends Authenticatable
         return "http://www.gravatar.com/avatar/$hash?s=$size";
     }
 
+    //生成 随机激活码
     public static function boot()
     {
         parent::boot();
         static::creating(function($user) {
             $user->activation_token = str_random(30);
         });
+    }
+
+    // 指明一对多个微博
+    public function statuses()
+    {
+        return $this->hasMany(Status::class);
     }
 }
