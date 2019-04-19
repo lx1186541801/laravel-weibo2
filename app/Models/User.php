@@ -82,10 +82,10 @@ class User extends Authenticatable
     // 关注方法
     public function follow($user_ids)
     {
-        if(!is_array($user_ids)) {
+        if( ! is_array($user_ids)) {
             $user_ids = compact('user_ids');
         }
-        $this->followers()->sync($user_ids, false);
+        $this->followings()->sync($user_ids, false);
     }
 
     // 取消关注
@@ -98,7 +98,7 @@ class User extends Authenticatable
     }
 
     // 判断当前用户是否 关注了user_id
-    public function isFollowign($user_id)
+    public function isFollowing($user_id)
     {
         return $this->followings->contains($user_id);
     }

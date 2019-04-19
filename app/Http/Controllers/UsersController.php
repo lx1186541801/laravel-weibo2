@@ -137,7 +137,7 @@ class UsersController extends Controller
     {
         $users = $user->followers()->paginate(30);
         $title = $user->name . "的粉丝";
-        return view('users.show_follow', compact('users', 'title'));
+        return view('users.show_follow', compact('users', 't itle'));
     }
 
     // 获取关注的人
